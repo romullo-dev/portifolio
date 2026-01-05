@@ -24,12 +24,21 @@
         <span class="brand__name">Rômulo França</span>
       </a>
 
-      <nav class="nav">
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#skills">Competências</a>
-        <a href="#contato">Contato</a>
-        <a class="btn btn--sm" href="#contato">Falar comigo</a>
+      <!-- NAV com hambúrguer -->
+      <nav class="nav" id="nav">
+        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+        </button>
+
+        <div class="nav__menu" id="navMenu">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#skills">Competências</a>
+          <a href="#contato">Contato</a>
+          <a class="btn btn--sm" href="#contato">Falar comigo</a>
+        </div>
       </nav>
     </div>
   </header>
@@ -293,6 +302,39 @@
     }, { threshold: 0.15 });
 
     els.forEach(el=>io.observe(el));
+
+    // ===== Mobile menu =====
+    const nav = document.getElementById("nav");
+    const toggle = nav.querySelector(".nav__toggle");
+    const menu = document.getElementById("navMenu");
+
+    const closeMenu = () => {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Abrir menu");
+    };
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    });
+
+    // Fecha clicando fora
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target)) closeMenu();
+    });
+
+    // Fecha ao clicar em algum link
+    menu.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", closeMenu);
+    });
+
+    // Fecha com ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
   </script>
 </body>
 </html>
