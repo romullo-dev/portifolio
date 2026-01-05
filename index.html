@@ -45,7 +45,6 @@
 
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="container hero__grid">
       <div class="hero__text">
@@ -295,7 +294,6 @@
   </footer>
 
   <script>
-    // Animação leve ao rolar (premium, sem exagero)
     const els = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
@@ -305,7 +303,6 @@
 
     els.forEach(el=>io.observe(el));
 
-    // ===== Mobile menu =====
     const nav = document.getElementById("nav");
     const toggle = nav.querySelector(".nav__toggle");
     const menu = document.getElementById("navMenu");
@@ -323,17 +320,14 @@
       toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
     });
 
-    // Fecha clicando fora
     document.addEventListener("click", (e) => {
       if (!nav.contains(e.target)) closeMenu();
     });
 
-    // Fecha ao clicar em algum link
     menu.querySelectorAll("a").forEach(a => {
       a.addEventListener("click", closeMenu);
     });
 
-    // Fecha com ESC
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeMenu();
     });
