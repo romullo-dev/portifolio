@@ -24,23 +24,25 @@
         <span class="brand__name">Rômulo França</span>
       </a>
 
-      <!-- NAV com hambúrguer -->
-      <nav class="nav" id="nav">
-        <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
-          <span class="nav__bar"></span>
-          <span class="nav__bar"></span>
-          <span class="nav__bar"></span>
-        </button>
+      <nav class="nav nav--cb">
+  <input type="checkbox" id="navToggle" class="nav__cb">
 
-        <div class="nav__menu" id="navMenu">
-          <a href="#sobre">Sobre</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#skills">Competências</a>
-          <a href="#contato">Contato</a>
-          <a class="btn btn--sm" href="#contato">Falar comigo</a>
-        </div>
-      </nav>
-    </div>
+  <label for="navToggle" class="nav__toggle" aria-label="Abrir menu">
+    <span class="nav__bar"></span>
+    <span class="nav__bar"></span>
+    <span class="nav__bar"></span>
+  </label>
+
+  <div class="nav__menu">
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#skills">Competências</a>
+    <a href="#contato">Contato</a>
+    <a class="btn btn--sm" href="#contato">Falar comigo</a>
+  </div>
+</nav>
+
+
   </header>
 
   <!-- Hero -->

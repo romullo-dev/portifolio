@@ -56,6 +56,99 @@ a{ color:inherit; text-decoration:none; }
   transition: .2s ease;
 }
 .nav a:hover{ color: var(--text); background: rgba(255,255,255,.05); }
+/* ===== Menu hambúrguer SEM JavaScript ===== */
+.nav--cb{ position: relative; }
+
+/* checkbox escondido */
+.nav__cb{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* botão hambúrguer (some no desktop) */
+.nav__toggle{
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+.nav__toggle:hover{ background: rgba(255,255,255,.06); }
+
+.nav__bar{
+  display:block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 999px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+/* menu no desktop normal */
+.nav__menu{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* MOBILE */
+@media (max-width: 760px){
+  .nav__toggle{ display: inline-flex; }
+
+  /* menu vira dropdown e fica fechado */
+  .nav__menu{
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(320px, 92vw);
+    display: grid;
+    gap: 6px;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: rgba(11,15,20,.92);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: .2s ease;
+  }
+
+  /* quando checkbox está marcado -> abre menu */
+  .nav__cb:checked ~ .nav__menu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* animação do hambúrguer virando X */
+  .nav__cb:checked + .nav__toggle .nav__bar:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav__cb:checked + .nav__toggle .nav__bar:nth-child(2){
+    opacity: 0;
+  }
+  .nav__cb:checked + .nav__toggle .nav__bar:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav__menu a{
+    padding: 10px 10px;
+    border-radius: 12px;
+    font-weight: 900;
+  }
+}
+
 
 /* Buttons */
 .btn{
@@ -397,3 +490,100 @@ a{ color:inherit; text-decoration:none; }
 
   .meta{ flex-direction: column; align-items: flex-start; }
 }
+
+/* ===== FIX DEFINITIVO: hambúrguer sem JS ===== */
+.nav--cb{ position: relative; }
+
+/* esconde o checkbox */
+.nav--cb .nav__cb{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* botão hambúrguer */
+.nav--cb .nav__toggle{
+  display: none;                /* só mobile */
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius: 14px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  line-height: 0;
+  font-size: 0;
+}
+.nav--cb .nav__toggle:hover{ background: rgba(255,255,255,.06); }
+
+/* as 3 barras (força aparecer) */
+.nav--cb .nav__bar{
+  display: block !important;
+  width: 18px !important;
+  height: 2px !important;
+  background: var(--text) !important;
+  border-radius: 999px;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  content: "" !important;
+}
+
+/* menu desktop normal */
+.nav--cb .nav__menu{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* mobile */
+@media (max-width: 760px){
+  .nav--cb .nav__toggle{ display: inline-flex; }
+
+  .nav--cb .nav__menu{
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(320px, 92vw);
+    display: grid;
+    gap: 6px;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    background: rgba(11,15,20,.92);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: .2s ease;
+  }
+
+  /* abre quando marca */
+  .nav--cb .nav__cb:checked ~ .nav__menu{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* vira X */
+  .nav--cb .nav__cb:checked + .nav__toggle .nav__bar:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+  }
+  .nav--cb .nav__cb:checked + .nav__toggle .nav__bar:nth-child(2){
+    opacity: 0;
+  }
+  .nav--cb .nav__cb:checked + .nav__toggle .nav__bar:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
