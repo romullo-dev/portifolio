@@ -568,7 +568,6 @@ a{ color:inherit; text-decoration:none; }
     transition: .2s ease;
   }
 
-  /* abre quando marca */
   .nav--cb .nav__cb:checked ~ .nav__menu{
     opacity: 1;
     transform: translateY(0);
