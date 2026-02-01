@@ -568,6 +568,42 @@ a{ color:inherit; text-decoration:none; }
     transition: .2s ease;
   }
 
+  .project-gallery {
+  margin-top: 3rem;
+}
+
+.project-gallery h2 {
+  margin-bottom: 1.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 180px);
+  gap: 1rem;
+}
+
+.gallery-grid a {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-main {
+  grid-row: span 2;
+}
+
+
   .nav--cb .nav__cb:checked ~ .nav__menu{
     opacity: 1;
     transform: translateY(0);

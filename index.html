@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rômulo França | Portfólio</title>
 
-  <meta name="description" content="Portfólio de Rômulo França — Desenvolvedor de Sistemas com foco em processos, logística e rastreabilidade." />
+  <meta name="description"
+    content="Portfólio de Rômulo França — Desenvolvedor de Sistemas com foco em processos, logística e rastreabilidade." />
   <meta name="theme-color" content="#0b0f14">
 
   <link rel="stylesheet" href="CSS/style.css?v=3" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -24,22 +27,22 @@
       </a>
 
       <nav class="nav nav--cb">
-  <input type="checkbox" id="navToggle" class="nav__cb">
+        <input type="checkbox" id="navToggle" class="nav__cb">
 
-  <label for="navToggle" class="nav__toggle" aria-label="Abrir menu">
-    <span class="nav__bar"></span>
-    <span class="nav__bar"></span>
-    <span class="nav__bar"></span>
-  </label>
+        <label for="navToggle" class="nav__toggle" aria-label="Abrir menu">
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+        </label>
 
-  <div class="nav__menu">
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#skills">Competências</a>
-    <a href="#contato">Contato</a>
-    <a class="btn btn--sm" href="#contato">Falar comigo</a>
-  </div>
-</nav>
+        <div class="nav__menu">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#skills">Competências</a>
+          <a href="#contato">Contato</a>
+          <a class="btn btn--sm" href="#contato">Falar comigo</a>
+        </div>
+      </nav>
 
 
   </header>
@@ -52,7 +55,8 @@
         <h1>Desenvolvo sistemas que estruturam processos, organizam dados e ampliam a visibilidade operacional.</h1>
 
         <p class="lead">
-          Atuo na construção de soluções orientadas a processo, com foco em padronização, rastreabilidade e confiabilidade da informação.
+          Atuo na construção de soluções orientadas a processo, com foco em padronização, rastreabilidade e
+          confiabilidade da informação.
           O objetivo é reduzir retrabalho, centralizar dados e apoiar a tomada de decisão ao longo de toda a operação.
         </p>
 
@@ -83,7 +87,8 @@
 
             <div class="profile__links">
               <a class="link" href="https://github.com/romullo-dev" target="_blank" rel="noopener">GitHub</a>
-              <a class="link" href="https://www.linkedin.com/in/r%C3%B4mulo-fran%C3%A7a/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="link" href="https://www.linkedin.com/in/r%C3%B4mulo-fran%C3%A7a/" target="_blank"
+                rel="noopener">LinkedIn</a>
               <a class="link" href="mailto:romulo.franca03@gmail.com">Email</a>
             </div>
           </div>
@@ -201,7 +206,8 @@
               <h3>Sistema de Controle de Estoque</h3>
 
               <p>
-                Sistema em desenvolvimento para controle de entradas, saídas, endereçamento e rastreabilidade de movimentações.
+                Sistema em desenvolvimento para controle de entradas, saídas, endereçamento e rastreabilidade de
+                movimentações.
               </p>
               <br>
               <div class="chips">
@@ -212,7 +218,7 @@
               </div>
 
               <div class="project-actions">
-                <a class="btn btn--sm" href="#">Ver projeto</a>
+                <a class="btn btn--sm" href="projects/estoque.html">Ver projeto</a>
               </div>
             </div>
           </article>
@@ -278,7 +284,8 @@
 
           <div class="contact-actions">
             <a class="btn btn--sm" href="mailto:romulo.franca03@gmail.com">Enviar email</a>
-            <a class="btn btn--sm btn--ghost" href="https://www.linkedin.com/in/r%C3%B4mulo-fran%C3%A7a/" target="_blank" rel="noopener">Abrir LinkedIn</a>
+            <a class="btn btn--sm btn--ghost" href="https://www.linkedin.com/in/r%C3%B4mulo-fran%C3%A7a/"
+              target="_blank" rel="noopener">Abrir LinkedIn</a>
           </div>
         </div>
       </div>
@@ -294,13 +301,13 @@
 
   <script>
     const els = document.querySelectorAll(".reveal");
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){ e.target.classList.add("is-visible"); }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add("is-visible"); }
       });
     }, { threshold: 0.15 });
 
-    els.forEach(el=>io.observe(el));
+    els.forEach(el => io.observe(el));
 
     const nav = document.getElementById("nav");
     const toggle = nav.querySelector(".nav__toggle");
@@ -332,4 +339,5 @@
     });
   </script>
 </body>
+
 </html>
