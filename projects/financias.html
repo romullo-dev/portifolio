@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financias | Case de Projeto - Rômulo França</title>
+
+  <meta name="description"
+    content="Case profissional do Financias, plataforma de controle financeiro inteligente com dashboard, receitas, despesas, reservas, metas, notificações, Supabase e PostgreSQL." />
+  <meta name="theme-color" content="#080a0f" />
+
+  <link rel="stylesheet" href="../CSS/style.css?v=4" />
+</head>
+
+<body class="financias-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Voltar para o início">
+        <span class="brand-mark" aria-hidden="true">RF</span>
+        <span class="brand-text">Rômulo França</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-menu" id="site-menu" aria-label="Menu principal">
+        <a href="../index.html#sobre">Sobre</a>
+        <a href="../index.html#tecnologias">Tecnologias</a>
+        <a href="../index.html#projetos">Projetos</a>
+        <a href="../index.html#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero case-hero financias-hero">
+      <div class="container case-hero-grid">
+        <div class="reveal">
+          <a class="breadcrumb" href="../index.html#projetos">Voltar para projetos</a>
+          <p class="eyebrow">Case profissional - finanças pessoais</p>
+          <h1>Financias</h1>
+          <p class="lead">Plataforma de Controle Financeiro Inteligente</p>
+          <p class="hero-text">
+            Sistema web desenvolvido para ajudar usuários a controlar entradas, saídas, reservas, gastos fixos, metas e
+            projeções financeiras de forma simples, segura e inteligente.
+          </p>
+
+          <div class="hero-actions">
+            <!-- Substitua o href abaixo pelo link do repositório quando ele estiver público. -->
+            <a class="btn" href="#" target="_blank" rel="noopener">Ver repositório</a>
+            <a class="btn btn-secondary" href="../index.html#projetos">Voltar ao portfólio</a>
+          </div>
+        </div>
+
+        <figure class="finance-hero-shot reveal">
+          <img src="../assets/img/financias-dashboard.png"
+            alt="Dashboard do Financias com resumo de receitas, despesas, reservas e saldo do período" />
+          <figcaption>Dashboard principal com visão completa do período financeiro.</figcaption>
+        </figure>
+      </div>
+
+      <div class="container meta-grid reveal" aria-label="Resumo do projeto">
+        <div class="meta-item">
+          <span>Tipo</span>
+          <strong>Controle financeiro pessoal</strong>
+        </div>
+        <div class="meta-item">
+          <span>Foco</span>
+          <strong>Planejamento, hábitos e previsibilidade</strong>
+        </div>
+        <div class="meta-item">
+          <span>Stack</span>
+          <strong>Bootstrap 5, Supabase, PostgreSQL, Auth e RLS</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Visão geral</p>
+          <h2>Organização financeira com leitura rápida e decisões mais claras.</h2>
+          <p>
+            O Financias ajuda o usuário a controlar entradas e saídas, organizar gastos fixos, acompanhar metas,
+            visualizar projeções futuras, melhorar hábitos financeiros e tomar decisões mais conscientes.
+          </p>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-panel reveal">
+            <h3>Problema</h3>
+            <p>
+              Muitas pessoas têm dificuldade para entender para onde o dinheiro está indo, controlar gastos recorrentes
+              e manter previsibilidade financeira. O Financias centraliza essas informações e transforma dados
+              financeiros em decisões mais claras.
+            </p>
+          </article>
+
+          <article class="case-panel reveal">
+            <h3>Solução</h3>
+            <p>
+              A plataforma reúne controle de receitas, despesas, reservas, renda fixa, gastos fixos, movimentações
+              automáticas, notificações, dashboard inteligente e segurança por usuário.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Funcionalidades principais</p>
+          <h2>Recursos pensados para rotina financeira real.</h2>
+        </div>
+
+        <div class="finance-feature-grid">
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">R$</span>
+            <h3>Controle de receitas</h3>
+            <p>Registro de entradas, renda fixa, renda extra e previsão de recebimentos.</p>
+          </article>
+
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">-</span>
+            <h3>Controle de despesas</h3>
+            <p>Cadastro de gastos por categoria, forma de pagamento e impacto no saldo.</p>
+          </article>
+
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">RS</span>
+            <h3>Reservas</h3>
+            <p>Acompanhamento de saldo reservado, saldo livre e valores guardados em metas.</p>
+          </article>
+
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">GF</span>
+            <h3>Gastos fixos</h3>
+            <p>Controle de compromissos recorrentes e despesas que afetam o planejamento mensal.</p>
+          </article>
+
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">RF</span>
+            <h3>Renda fixa</h3>
+            <p>Entradas previstas, confirmação de recebimentos e projeção de orçamento.</p>
+          </article>
+
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">MT</span>
+            <h3>Metas financeiras</h3>
+            <p>Definição de objetivos, valor atual, progresso e prazo de conclusão.</p>
+          </article>
+
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">!</span>
+            <h3>Notificações</h3>
+            <p>Alertas de vencimento, movimentações recorrentes e confirmações importantes.</p>
+          </article>
+
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">BI</span>
+            <h3>Dashboard inteligente</h3>
+            <p>Resumo de saldo, receitas, despesas, crédito, reservas e categorias ofensores.</p>
+          </article>
+
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">AU</span>
+            <h3>Autenticação por usuário</h3>
+            <p>Login individual, redefinição de senha, primeiro acesso e sessões seguras.</p>
+          </article>
+
+          <article class="finance-feature-card reveal">
+            <span class="feature-icon">RLS</span>
+            <h3>Segurança com RLS</h3>
+            <p>Proteção de dados por usuário com políticas de Row Level Security no Supabase.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Tecnologias utilizadas</p>
+          <h2>Stack com front-end leve, banco relacional e segurança por usuário.</h2>
+        </div>
+
+        <div class="stack-groups">
+          <article class="summary-panel reveal">
+            <h3>Front-end</h3>
+            <div class="tag-list">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Bootstrap 5</span>
+            </div>
+          </article>
+
+          <article class="summary-panel reveal">
+            <h3>Back-end e infraestrutura</h3>
+            <div class="tag-list">
+              <span>Supabase</span>
+              <span>PostgreSQL</span>
+              <span>Supabase Auth</span>
+              <span>Row Level Security</span>
+              <span>Edge Functions</span>
+            </div>
+          </article>
+
+          <article class="summary-panel reveal">
+            <h3>Banco de dados</h3>
+            <ul class="mini-list">
+              <li>Tabelas relacionais</li>
+              <li>Foreign keys e constraints</li>
+              <li>Validações e políticas RLS</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Galeria de telas</p>
+          <h2>Prints reais do sistema em funcionamento.</h2>
+          <p>
+            As telas mostram dashboard, relatórios, metas, notificações, login e assistente financeiro por mensagens.
+          </p>
+        </div>
+
+        <div class="finance-gallery">
+          <figure class="finance-gallery-card finance-gallery-card--wide reveal">
+            <img src="../assets/img/financias-dashboard.png"
+              alt="Dashboard do Financias com cards de receitas, despesas, crédito e reservas" loading="lazy" />
+            <figcaption>
+              <strong>Dashboard principal</strong>
+              <span>Resumo do período, saldo livre, receitas, despesas, reservas e categoria com maior gasto.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="finance-gallery-card reveal">
+            <img src="../assets/img/financias-dashboard2.png"
+              alt="Tela de login do Financias com formulário de e-mail e senha" loading="lazy" />
+            <figcaption>
+              <strong>Acesso seguro</strong>
+              <span>Login individual para acessar dashboard, metas e movimentações.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="finance-gallery-card finance-gallery-card--wide reveal">
+            <img src="../assets/img/financias-movimentacoes.png"
+              alt="Tela de relatórios do Financias com totais por categoria, forma de pagamento e tipo"
+              loading="lazy" />
+            <figcaption>
+              <strong>Relatórios e movimentações</strong>
+              <span>Análise de categorias, pagamentos, receitas, despesas, crédito e reservas.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="finance-gallery-card finance-gallery-card--wide reveal">
+            <img src="../assets/img/financias-metas.png"
+              alt="Tela de metas financeiras do Financias com formulário e progresso de meta" loading="lazy" />
+            <figcaption>
+              <strong>Metas financeiras</strong>
+              <span>Cadastro, edição e acompanhamento de objetivos com barra de progresso.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="finance-gallery-card reveal">
+            <img src="../assets/img/financias-notificacoes.png"
+              alt="Tela de notificações inteligentes do Financias com alertas de renda fixa e gastos"
+              loading="lazy" />
+            <figcaption>
+              <strong>Notificações inteligentes</strong>
+              <span>Alertas para renda prevista, gastos por hábito e movimentações de alto impacto.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="finance-gallery-card finance-gallery-card--phone reveal">
+            <img src="../assets/img/financias-mobile.png"
+              alt="Assistente financeiro do Financias com conversa e comandos por mensagem" loading="lazy" />
+            <figcaption>
+              <strong>Assistente financeiro</strong>
+              <span>Consulta de gastos e saldo por comandos em linguagem natural.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container insight-grid">
+        <article class="summary-panel reveal">
+          <p class="eyebrow">Arquitetura</p>
+          <h3>Estrutura preparada para evoluir</h3>
+          <p>
+            O sistema foi criado com separação de responsabilidades, componentes reutilizáveis, renderização dinâmica,
+            comunicação assíncrona com o banco, autenticação JWT, sessões seguras e permissões por usuário.
+          </p>
+        </article>
+
+        <article class="case-panel reveal">
+          <p class="eyebrow">Diferenciais</p>
+          <h3>O que fortalece o projeto</h3>
+          <ul class="check-list">
+            <li>Organização financeira inteligente e previsibilidade mensal.</li>
+            <li>Automações para movimentações e alertas financeiros.</li>
+            <li>Segurança com RLS e arquitetura escalável.</li>
+            <li>Interface moderna, responsiva e focada na experiência do usuário.</li>
+          </ul>
+        </article>
+
+        <article class="summary-panel reveal">
+          <p class="eyebrow">Aprendizados</p>
+          <h3>Construção de produto financeiro</h3>
+          <p>
+            O Financias consolidou práticas de modelagem relacional, autenticação, regras de segurança por usuário,
+            dashboards com leitura rápida e organização de fluxos recorrentes para uso real.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Funcionalidades futuras</p>
+          <h2>Próximas evoluções planejadas.</h2>
+        </div>
+
+        <div class="feature-list">
+          <article class="feature-item reveal">
+            <h3>Integrações</h3>
+            <p>Importação de extrato bancário CSV, integração com bancos digitais e API para dashboards externos.</p>
+          </article>
+          <article class="feature-item reveal">
+            <h3>Automação inteligente</h3>
+            <p>Categorização automática de gastos, geração de insights financeiros e integração futura com Power BI.</p>
+          </article>
+          <article class="feature-item reveal">
+  <h3>Inteligência financeira</h3>
+  <p>
+    Arquitetura planejada para futuras análises inteligentes, como previsão de gastos,
+    identificação de padrões de consumo e recomendações personalizadas com base no
+    histórico financeiro do usuário.
+  </p>
+</article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="current-year">2026</span> Rômulo França.</p>
+      <a href="../index.html#projetos">Voltar aos projetos</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js?v=4"></script>
+</body>
+
+</html>

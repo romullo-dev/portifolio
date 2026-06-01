@@ -1,249 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DNA Transportes | Projeto - Rômulo França</title>
+  <title>DNATransportes | Case de Projeto - Rômulo França</title>
 
-  <meta name="description" content="DNA Transportes — plataforma de gestão logística com foco em processos, rotas, rastreabilidade e visibilidade operacional." />
-  <meta name="theme-color" content="#0b0f14">
+  <meta name="description"
+    content="Case profissional do DNATransportes, plataforma de gestão logística com pedidos, rotas, status, documentos, dashboards e aplicativo mobile." />
+  <meta name="theme-color" content="#080a0f" />
 
-  <!-- PADRONIZA com o mesmo do estoque -->
-  <link rel="stylesheet" href="../CSS/style.css?v=3" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css?v=4" />
 </head>
 
 <body>
-
-  <!-- TOPBAR (igual ao estoque) -->
-  <header class="topbar">
-    <div class="container topbar__content">
-      <a class="brand" href="../index.html">
-        <span class="brand__dot"></span>
-        <span class="brand__name">Rômulo França</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Voltar para o início">
+        <span class="brand-mark" aria-hidden="true">RF</span>
+        <span class="brand-text">Rômulo França</span>
       </a>
 
-      <nav class="nav nav--cb">
-        <input class="nav__cb" type="checkbox" id="nav-cb-dna">
-        <label class="nav__toggle" for="nav-cb-dna" aria-label="Abrir menu">
-          <span class="nav__bar"></span>
-          <span class="nav__bar"></span>
-          <span class="nav__bar"></span>
-        </label>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <div class="nav__menu">
-          <a class="btn btn--sm" href="../index.html#projetos">Voltar</a>
-        </div>
+      <nav class="site-menu" id="site-menu" aria-label="Menu principal">
+        <a href="../index.html#sobre">Sobre</a>
+        <a href="../index.html#tecnologias">Tecnologias</a>
+        <a href="../index.html#projetos">Projetos</a>
+        <a href="../index.html#contato">Contato</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO (igual ao estoque) -->
-  <section class="hero">
-    <div class="container hero__grid">
+  <main>
+    <section class="page-hero case-hero">
+      <div class="container case-hero-grid">
+        <div class="reveal">
+          <a class="breadcrumb" href="../index.html#projetos">Voltar para projetos</a>
+          <p class="eyebrow">Case profissional - logística</p>
+          <h1>DNATransportes</h1>
+          <p class="lead">
+            Plataforma web e mobile para gestão logística, criada para centralizar pedidos, rotas, documentos e
+            atualizações de status em uma operação com necessidade de rastreabilidade.
+          </p>
 
-      <div>
-        <div class="badge">Projeto • Plataforma Web & Mobile</div>
-
-        <h1>DNA Transportes</h1>
-
-        <p class="lead">
-          Plataforma de gestão logística desenvolvida do zero, orientada a processos e rastreabilidade.
-          Centraliza pedidos, rotas, documentos e histórico de status, entregando visibilidade operacional.
-        </p>
-
-        <div class="hero__actions">
-          <a class="btn" href="#" target="_blank" rel="noopener">Ver repositório</a>
-          <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">Ver demo</a>
-          <a class="btn btn--ghost" href="../index.html#contato">Falar comigo</a>
-        </div>
-
-        <!-- metas (igual ao estoque) -->
-        <div class="hero__meta">
-          <div class="meta">
-            <span class="meta__label">Foco</span>
-            <span class="meta__value">Processos + rastreio</span>
-          </div>
-          <div class="meta">
-            <span class="meta__label">Operação</span>
-            <span class="meta__value">Pedidos e Rotas</span>
-          </div>
-          <div class="meta">
-            <span class="meta__label">Visibilidade</span>
-            <span class="meta__value">Status em tempo real</span>
+          <div class="hero-actions">
+            <a class="btn" href="#case">Ver case</a>
+            <a class="btn btn-secondary" href="https://github.com/romullo-dev" target="_blank"
+              rel="noopener">GitHub</a>
+            <a class="btn btn-quiet" href="../index.html#contato">Entrar em contato</a>
           </div>
         </div>
 
-        <!-- chips (igual ao estoque) -->
-        <div class="chips" style="margin-top:14px;">
-          <span>Laravel</span>
-          <span>PHP</span>
-          <span>MySQL</span>
-          <span>Bootstrap</span>
-          <span>React Native</span>
-          <span>Web</span>
-          <span>Mobile</span>
+        <div class="case-visual reveal">
+          <img src="../assets/img/dna-transportes-4.png" alt="Painel de análises do projeto DNATransportes" />
         </div>
       </div>
 
-      <!-- Card direito (igual ao estoque) -->
-      <aside class="hero__card">
-        <div class="profile">
-          <img
-            class="profile__img"
-            src="../assets/img/dna-transportes-1.png"
-            alt="DNA Transportes - Dashboard"
-            loading="lazy"
-          />
+      <div class="container meta-grid reveal" aria-label="Resumo do projeto">
+        <div class="meta-item">
+          <span>Tipo</span>
+          <strong>Sistema logístico web e mobile</strong>
+        </div>
+        <div class="meta-item">
+          <span>Objetivo</span>
+          <strong>Organizar rotas, pedidos e status</strong>
+        </div>
+        <div class="meta-item">
+          <span>Stack</span>
+          <strong>Laravel, PHP, MySQL, Bootstrap, JavaScript</strong>
+        </div>
+      </div>
+    </section>
 
-          <div class="profile__info">
-            <h2>Resumo executivo</h2>
+    <section class="section section-muted" id="case">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Estudo de caso</p>
+          <h2>Da operação dispersa para uma plataforma centralizada.</h2>
+          <p>
+            O projeto foi pensado com foco em clareza operacional, redução de retrabalho e histórico confiável para
+            acompanhar cada etapa da entrega.
+          </p>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-panel reveal">
+            <h3>Problema</h3>
             <p>
-              Sistema com mentalidade de produto: controle operacional, rastreabilidade ponta a ponta
-              e tomada de decisão por indicadores.
+              Operações logísticas dependem de informações atualizadas: pedidos, endereços, motoristas, veículos,
+              documentos e status. Quando esses dados ficam espalhados em planilhas, mensagens ou controles manuais,
+              surgem atrasos, divergências e dificuldade para entender o andamento real das entregas.
             </p>
+          </article>
 
-            <div class="profile__links">
-              <span class="link">Rotas</span>
-              <span class="link">Pedidos</span>
-              <span class="link">Dashboard</span>
-              <span class="link">Mobile</span>
-            </div>
-          </div>
+          <article class="case-panel reveal">
+            <h3>Solução</h3>
+            <p>
+              O DNATransportes centraliza o fluxo da operação em uma plataforma única. O sistema organiza cadastros,
+              vincula pedidos a rotas, registra atualizações de status e entrega uma visão mais clara para quem precisa
+              acompanhar decisões e prioridades.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Funcionalidades</p>
+          <h2>Recursos pensados para uma rotina logística real.</h2>
         </div>
 
-        <div class="mini-stats">
-          <div class="stat">
-            <span class="stat__num">+ Controle</span>
-            <span class="stat__label">Operação centralizada</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">+ Rastreio</span>
-            <span class="stat__label">Histórico de status</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">+ Visão</span>
-            <span class="stat__label">Indicadores</span>
-          </div>
+        <div class="feature-list">
+          <article class="feature-item reveal">
+            <h3>Pedidos</h3>
+            <p>Cadastro e acompanhamento de pedidos com dados essenciais para a operação.</p>
+          </article>
+          <article class="feature-item reveal">
+            <h3>Rotas</h3>
+            <p>Organização de trajetos, vínculo com motorista, veículo e entregas associadas.</p>
+          </article>
+          <article class="feature-item reveal">
+            <h3>Status</h3>
+            <p>Histórico de eventos para acompanhar o andamento de cada entrega.</p>
+          </article>
+          <article class="feature-item reveal">
+            <h3>Documentos</h3>
+            <p>Centralização de informações relacionadas a documentos fiscais e registros.</p>
+          </article>
+          <article class="feature-item reveal">
+            <h3>Dashboard</h3>
+            <p>Indicadores para melhorar visibilidade e apoiar decisões operacionais.</p>
+          </article>
+          <article class="feature-item reveal">
+            <h3>Mobile</h3>
+            <p>Aplicativo para atualizações de status fora do ambiente administrativo.</p>
+          </article>
         </div>
-      </aside>
+      </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- SEÇÃO 1 (igual ao estoque) -->
-  <section class="section section--alt">
-    <div class="container section__grid">
-      <div>
-        <div class="section__head">
-          <h2 class="section__title">Visão geral</h2>
-          <p class="section__text">
-            O DNA Transportes organiza a logística do pedido à entrega: cadastro, roteirização, vínculo de motorista/veículo,
-            status e documentos — tudo rastreável e centralizado.
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Tecnologias</p>
+          <h2>Stack usada no desenvolvimento.</h2>
+          <p>
+            O projeto combina back-end, banco de dados, interface web e apoio mobile para cobrir diferentes pontos da
+            operação.
           </p>
         </div>
 
-        <div class="card">
-          <h3>Problema</h3>
-          <p class="muted" style="margin-top:10px;">
-            Operações com dados dispersos (planilhas, sistemas isolados e controles manuais) perdem visibilidade,
-            geram inconsistências e dificultam o acompanhamento real das rotas e entregas.
+        <div class="tech-grid">
+          <article class="tech-card reveal"><span>Laravel</span></article>
+          <article class="tech-card reveal"><span>PHP</span></article>
+          <article class="tech-card reveal"><span>MySQL</span></article>
+          <article class="tech-card reveal"><span>Bootstrap</span></article>
+          <article class="tech-card reveal"><span>JavaScript</span></article>
+          <article class="tech-card reveal"><span>HTML</span></article>
+          <article class="tech-card reveal"><span>CSS</span></article>
+          <article class="tech-card reveal"><span>Git</span></article>
+          <article class="tech-card reveal"><span>React Native</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Galeria</p>
+          <h2>Algumas telas do sistema.</h2>
+          <p>
+            Prints de dashboard, rotas, telas operacionais e aplicativo mobile.
           </p>
         </div>
 
-        <div class="card" style="margin-top:14px;">
-          <h3>Solução</h3>
-          <p class="muted" style="margin-top:10px;">
-            Uma plataforma única que consolida pedidos, rotas e status, com histórico completo,
-            dashboards e integração entre web e mobile para atualização em tempo real.
-          </p>
+        <div class="gallery-grid reveal">
+          <a href="../assets/img/dna-transportes-4.png" target="_blank" rel="noopener">
+            <img src="../assets/img/dna-transportes-4.png" alt="Dashboard com indicadores do DNATransportes" />
+          </a>
+          <a href="../assets/img/dna-transportes-1.png" target="_blank" rel="noopener">
+            <img src="../assets/img/dna-transportes-1.png" alt="Tela principal do DNATransportes" />
+          </a>
+          <a href="../assets/img/dna-transportes-2.png" target="_blank" rel="noopener">
+            <img src="../assets/img/dna-transportes-2.png" alt="Tela de gestão de rotas do DNATransportes" />
+          </a>
+          <a href="../assets/img/dna-transportes-3.png" target="_blank" rel="noopener">
+            <img src="../assets/img/dna-transportes-3.png" alt="Aplicativo mobile do DNATransportes" />
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="about-card">
-        <h3>Principais funcionalidades</h3>
-        <ul class="checklist">
-          <li>Gestão de pedidos, clientes, endereços e documentos fiscais</li>
-          <li>Planejamento, cálculo e rastreamento de rotas</li>
-          <li>Controle de motoristas e veículos por rota</li>
-          <li>Histórico completo de status (rastreabilidade ponta a ponta)</li>
-          <li>Dashboard com indicadores operacionais</li>
-          <li>App mobile para atualização em tempo real</li>
-        </ul>
+    <section class="section section-muted">
+      <div class="container learning-layout">
+        <article class="summary-panel reveal">
+          <p class="eyebrow">Aprendizados</p>
+          <h3>O que o projeto desenvolveu</h3>
+          <p>
+            O DNATransportes ajudou a consolidar conhecimentos de modelagem de dados, regras de negócio, organização de
+            fluxos, cadastro de entidades relacionadas e construção de telas voltadas para acompanhamento operacional.
+          </p>
+        </article>
+
+        <article class="case-panel reveal">
+          <h3>Decisões importantes</h3>
+          <ul class="check-list">
+            <li>Separar cadastros, rotas e status para manter o fluxo mais organizado.</li>
+            <li>Registrar histórico de eventos para facilitar auditoria e acompanhamento.</li>
+            <li>Usar dashboards para transformar dados operacionais em leitura rápida.</li>
+            <li>Preparar a estrutura para evolução web e mobile.</li>
+          </ul>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- GALERIA (mesmo bloco do estoque) -->
-  <section class="section">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="section__title">Imagens do sistema</h2>
-        <p class="section__text">
-          Prints do dashboard, rotas, pedidos e aplicativo mobile.
-        </p>
-      </div>
-
-      <div class="gallery">
-        <a href="../assets/img/dna-transportes-4.png" target="_blank" rel="noopener">
-          <img src="../assets/img/dna-transportes-4.png" alt="DNA Transportes - Dashboard" loading="lazy" decoding="async">
-        </a>
-
-        <a href="../assets/img/dna-transportes-2.png" target="_blank" rel="noopener">
-          <img src="../assets/img/dna-transportes-2.png" alt="DNA Transportes - Gestão de Rotas" loading="lazy" decoding="async">
-        </a>
-
-        <a href="../assets/img/dna-transportes-3.png" target="_blank" rel="noopener">
-          <img src="../assets/img/dna-transportes-3.png" alt="DNA Transportes - Aplicativo Mobile" loading="lazy" decoding="async">
-        </a>
-      </div>
-
-      <div class="project-actions" style="margin-top:16px;">
-        <a class="btn btn--ghost btn--sm" href="../index.html#projetos">Voltar para projetos</a>
-        <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Abrir repositório</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO EXTRA (Decisões técnicas + Resumo) -->
-  <section class="section section--alt">
-    <div class="container" style="display:grid; gap:14px;">
-      <div class="card">
-        <h2 style="font-size:1.2rem; margin-bottom:10px;">Decisões técnicas</h2>
-        <ul style="padding-left:18px; color: var(--muted); font-weight:700; display:grid; gap:6px;">
-          <li>Arquitetura orientada a processos e fluxo operacional</li>
-          <li>Regras de negócio centralizadas e validações de integridade</li>
-          <li>Separação entre backend, web e aplicativo mobile</li>
-          <li>Persistência estruturada para histórico e rastreabilidade</li>
-          <li>Deploy controlado com Docker</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2 style="font-size:1.2rem; margin-bottom:10px;">Resumo executivo</h2>
-        <p class="section__text">
-          O DNA Transportes entrega controle operacional, rastreabilidade completa e visibilidade em tempo real.
-          A plataforma foi construída com mentalidade de produto, apoiando tomada de decisão com dados consolidados,
-          dashboards e integração entre web e mobile.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER (igual ao estoque) -->
   <footer class="footer">
-    <div class="container footer__content">
-      <p class="muted">© <span id="year"></span> • Rômulo França • Portfólio</p>
-      <p class="muted">DNA Transportes • Plataforma Web & Mobile</p>
+    <div class="container footer-inner">
+      <p>&copy; <span id="current-year">2026</span> Rômulo França.</p>
+      <a href="../index.html#projetos">Voltar aos projetos</a>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
+  <script src="../assets/js/main.js?v=4"></script>
 </body>
+
 </html>
